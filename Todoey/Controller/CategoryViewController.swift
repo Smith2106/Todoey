@@ -7,9 +7,11 @@
 //
 
 import UIKit
-import CoreData
+import RealmSwift
 
 class CategoryViewController: UITableViewController {
+    
+    let realm = try! Realm()
 
     var categories = [Category]()
     
@@ -51,11 +53,13 @@ class CategoryViewController: UITableViewController {
     
     //MARK - Data Manipulation Methods
     
-    func saveCategories() {
+    func save(category: Category) {
         do {
-            try context.save()
+            try realm.write {
+                realm.add(category)
+            }
         } catch {
-            print("Error saving context, \(error)")
+            print("Error saving category, \(error)")
         }
         
         tableView.reloadData()
@@ -78,11 +82,11 @@ class CategoryViewController: UITableViewController {
         
         let alert = UIAlertController(title: "Add a new category", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Category", style: .default) { (alert) in
-            let newCategory = Category(context: self.context)
+            let newCategory = Category()
             newCategory.name = textField.text!
             
             self.categories.append(newCategory)
-            self.saveCategories()
+            self.save(category: newCategory)
         }
         
         alert.addTextField { (alertTextField) in
