@@ -16,6 +16,7 @@
 		CF68EA55220AAB410030E65E /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68EA54220AAB410030E65E /* CategoryViewController.swift */; };
 		CF68EA59220B60460030E65E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68EA58220B60460030E65E /* Item.swift */; };
 		CF68EA5B220B60560030E65E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68EA5A220B60560030E65E /* Category.swift */; };
+		CF68EA5D220B78E30030E65E /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF68EA5C220B78E30030E65E /* SwipeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CF68EA54220AAB410030E65E /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		CF68EA58220B60460030E65E /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CF68EA5A220B60560030E65E /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CF68EA5C220B78E30030E65E /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		E9CA61B82F2AB219E2A28AA8 /* Pods_Todoey.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Todoey.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 			children = (
 				CF68EA54220AAB410030E65E /* CategoryViewController.swift */,
 				CF68E9FC2208EC660030E65E /* TodoListViewController.swift */,
+				CF68EA5C220B78E30030E65E /* SwipeTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				CF68EA55220AAB410030E65E /* CategoryViewController.swift in Sources */,
 				CF68E9FD2208EC660030E65E /* TodoListViewController.swift in Sources */,
 				CF68E9FB2208EC660030E65E /* AppDelegate.swift in Sources */,
+				CF68EA5D220B78E30030E65E /* SwipeTableViewController.swift in Sources */,
 				CF68EA5B220B60560030E65E /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
