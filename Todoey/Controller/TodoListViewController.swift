@@ -36,10 +36,10 @@ class TodoListViewController: SwipeTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        if let item = todoItems?[indexPath.row] {
+        if let item = todoItems?[indexPath.row], let currentCategory = selectedCategory {
             cell.textLabel?.text = item.title
             
-            if let color = UIColor.flatSkyBlue().darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
+            if let color = UIColor(hexString: currentCategory.color).darken(byPercentage: CGFloat(indexPath.row) / CGFloat(todoItems!.count)) {
                 cell.backgroundColor = color
                 cell.textLabel?.textColor = UIColor.init(contrastingBlackOrWhiteColorOn: color, isFlat: true)
             }
